@@ -1,0 +1,14 @@
+---
+layout: base
+title: Gallery
+---
+<em>SUP BROW</em>
+
+{% for post in site.type.gallery %}
+    <div class="gallery_item">
+        <img src="{{ post.image_url }}">
+        <h6>{{ post.image_title }}</h6>
+        <p>{{ post.image_subtitle }}</p>
+        <p>{{ content }}</p>
+    </div>
+{% endfor %}
