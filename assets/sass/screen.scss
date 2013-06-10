@@ -15,7 +15,8 @@ html, body {
 }
 body {
    background-color: rgb(243,243,243);
-   background: url('http://i.imgur.com/nk3N43y.png') center center;
+   // background: url('http://i.imgur.com/nk3N43y.png') center center;
+   background: url('/assets/img/mo-pattern.png') center center;
 }
 a {
     text-decoration: none;
@@ -31,7 +32,7 @@ p {
 .container {
     width: 960px;
     margin: 0 auto;
-    background: rgba(255,255,255,.9);
+    // background: rgba(255,255,255,.9);
 }
 #page {
     padding: 20px;
@@ -118,6 +119,8 @@ header {
     width: 33.33%;
     display: inline-block;
     margin-right: -4px;
+    padding: 5px;
+    box-sizing: border-box;
     img {
         width: 100%;
     }
