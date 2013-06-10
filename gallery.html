@@ -2,13 +2,16 @@
 layout: base
 title: Gallery
 ---
-<em>SUP BROW</em>
+<h2>MAH GALLERIE</h2>
 
-{% for post in site.type.gallery %}
+{% for post in site.categories.gallery %}
     <div class="gallery_item">
-        <img src="{{ post.image_url }}">
-        <h6>{{ post.image_title }}</h6>
-        <p>{{ post.image_subtitle }}</p>
-        <p>{{ content }}</p>
+        <a class="gallery_image" href="{{ post.image_url }}"><img src="{{ post.image_url }}"></a>
     </div>
 {% endfor %}
+
+<script>
+    $(document).ready( function() {
+        $('.gallery_image').fancybox();
+    });
+</script>

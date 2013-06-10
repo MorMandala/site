@@ -1,14 +1,40 @@
 <!doctype html>
 <html>
 <head>
-    <link href="assets/stylesheets/screen.css" rel="stylesheet" type="text/css" media="all">
+    <meta charset="utf-8">
+    <link href="/assets/stylesheets/screen.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/components/fancybox/source/jquery.fancybox.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/components/jquery/jquery.min.js"></script>
+    <script src="/components/fancybox/source/jquery.fancybox.pack.js"></script>
     <script src="http://use.edgefonts.net/lato.js"></script>
 </head>
 <body>
     <div class="container">
-        <em>SUP BROW</em>
+        <h2>MAH GALLERIE</h2>
 
 
+    <div class="gallery_item">
+        <a class="gallery_image" href="http://i.imgur.com/FQPTr8J.jpg"><img src="http://i.imgur.com/FQPTr8J.jpg"></a>
+    </div>
+
+    <div class="gallery_item">
+        <a class="gallery_image" href="http://i.imgur.com/FQPTr8J.jpg"><img src="http://i.imgur.com/FQPTr8J.jpg"></a>
+    </div>
+
+    <div class="gallery_item">
+        <a class="gallery_image" href="http://i.imgur.com/8b6ohoa.png"><img src="http://i.imgur.com/8b6ohoa.png"></a>
+    </div>
+
+    <div class="gallery_item">
+        <a class="gallery_image" href=""><img src=""></a>
+    </div>
+
+
+<script>
+    $(document).ready( function() {
+        $('.gallery_image').fancybox();
+    });
+</script>
 
     </div>
 </body>

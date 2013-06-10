@@ -10,7 +10,6 @@ $verafont: vera-sans, serif;
 $latofont: lato, serif;
 
 html, body {
-    height: 100%;
     margin: 0;
     padding: 0;
 }
@@ -32,6 +31,7 @@ p {
 .container {
     width: 960px;
     margin: 0 auto;
+    background: rgba(255,255,255,.9);
 }
 #page {
     padding: 20px;
@@ -112,6 +112,14 @@ header {
         display: inline;
         list-style-type: none;
         margin: 5px;
+    }
+}
+.gallery_item {
+    width: 33.33%;
+    display: inline-block;
+    margin-right: -4px;
+    img {
+        width: 100%;
     }
 }
 .inner {
