@@ -1,12 +1,10 @@
 ---
-layout: base
+layout: page
 title: Gallery
 ---
-<h2>MAH GALLERIE</h2>
-
 {% for post in site.categories.gallery %}
     <div class="gallery_item">
-        <a class="gallery_image" href="{{ post.image_url }}"><img src="{{ post.image_url }}"></a>
+        <a class="gallery_image" rel="main" href="{{ post.image_url }}"><img src="{{ post.image_url }}"></a>
     </div>
 {% endfor %}
 

@@ -1,4 +1,19 @@
 @import 'bourbon/bourbon'; 
+.nav-link {
+    a {
+        -webkit-transition-property: color;
+        -webkit-transition-duration: 0.3s;
+        background-color: none;
+        color: rgb(27,94,61);
+        text-transform: uppercase;
+        letter-spacing: .2em;
+    }
+    a:hover {
+        -webkit-transition-property: color;
+        -webkit-transition-duration: 0.3s;
+        color: black;
+    }
+}
 
 $Purp: #540EAD;
 $PurpDark: #340570;
@@ -9,14 +24,19 @@ $darkGrey: #0A0A0A;
 $verafont: vera-sans, serif;
 $latofont: lato, serif;
 
+@font-face {
+    font-family: Wavy;
+    src: url(../fonts/AndBasR.ttf);
+}
+
 html, body {
     margin: 0;
     padding: 0;
 }
 body {
-   background-color: rgb(243,243,243);
-   // background: url('http://i.imgur.com/nk3N43y.png') center center;
-   background: url('/assets/img/mo-pattern.png') center center;
+    background-color: rgb(243,243,243);
+    // background: url('http://i.imgur.com/nk3N43y.png') center center;
+    background: url('/assets/img/mo-pattern.png') center center;
 }
 a {
     text-decoration: none;
@@ -38,34 +58,31 @@ p {
     padding: 20px;
 }
 header {
-    height: 25px;
+    height: 100px;
+    position: relative;
     h1, nav {
         display: inline-block;
     }
     img {
         position: absolute;
+        width: 250px;
+        z-index: 10;
     }
     nav {
-        float: right;
+        display: block;
+        position: absolute;
+        top: 35px;
+        width: 100%;
+        border-bottom: 1px solid $TealLight;
         ul {
             padding: 0;
+            margin: 0;
             li {
-                display: inline;
+                display: inline-block;
                 list-style-type: none;
                 padding-left: 30px;
-                a {
-                    -webkit-transition-property: color;
-                    -webkit-transition-duration: 0.3s;
-                    background-color: none;
-                    color: rgb(27,94,61);
-                    text-transform: uppercase;
-                    letter-spacing: .2em;
-                }
-                a:hover {
-                    -webkit-transition-property: color;
-                    -webkit-transition-duration: 0.3s;
-                    color: black;
-                }
+                float: right;
+                @extend .nav-link;
             }
         }
         .gradient {
@@ -81,22 +98,34 @@ header {
     }
 }
 // splash page
-.img-wrapper.art {
+.splash-nav {
+    height: 20px;
+    position: relative;
+    @extend .nav-link;
+    a {
+        font-family: Wavy;
+        font-size: 22px;
+    }
     nav {
-        position: absolute;
+        ul {
+            margin: 0;
+            padding: 0;
+        }
         li {
-            display: inline-block;
-            position: relative;
+            position: absolute;
             float: left;
-        }
-        li:nth-child(3), li:nth-child(4) {
-            top: 20px;
-        }
-        li:nth-child(5), li:nth-child(6) {
-            top: 40px;
-        }
-        li:nth-child(2n+2) {
-            float: right;
+            list-style-type: none;
+            &:nth-child(1) {
+                left: 160px;
+                top: 270px;
+            }
+            &:nth-child(2) {
+                left: 444px;
+            }
+            &:nth-child(3) {
+                right: 160px;
+                top: 270px;
+            }
         }
     }
 }
@@ -136,8 +165,12 @@ header {
     &.sig {
         padding: 10px 0;
     }
-    &.art img {
-        height: 450px;
+    &.art { 
+        margin-top: 40px;
+        margin-left: 10px;
+        img {
+            height: 450px;
+        }
     }
     .circle {
         height: 450px;
