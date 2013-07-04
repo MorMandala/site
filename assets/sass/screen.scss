@@ -4,14 +4,14 @@
         -webkit-transition-property: color;
         -webkit-transition-duration: 0.3s;
         background-color: none;
-        color: rgb(27,94,61);
         text-transform: uppercase;
         letter-spacing: .2em;
+        color: black;
     }
     a:hover {
         -webkit-transition-property: color;
         -webkit-transition-duration: 0.3s;
-        color: black;
+        color: lighten(rgb(27,94,61), 30%);
     }
 }
 
@@ -24,11 +24,31 @@ $darkGrey: #0A0A0A;
 $verafont: vera-sans, serif;
 $latofont: lato, serif;
 
+// @font-face {
+//     font-family: Wavy;
+//     src: url(../fonts/AndBasR.ttf);
+// }
+// 
+// @font-face {
+//     font-family: Olde;
+//     src: url(../fonts/SOVERG__.ttf);
+// }
+// @font-face {
+//     font-family: Bon;
+//     src: url(../fonts/BonvenoCF-Light.otf);
+// }
+// @font-face {
+//     font-family: Ghandi;
+//     src: url(../fonts/GandhiSans-Italic.otf);
+// }
+// @font-face {
+//     font-family: Varela;
+//     src: url(../fonts/VarelaRound-Regular.otf);
+// }
 @font-face {
-    font-family: Wavy;
-    src: url(../fonts/AndBasR.ttf);
+    font-family: Lato;
+    src: url(../fonts/Lato-Lig.ttf);
 }
-
 html, body {
     margin: 0;
     padding: 0;
@@ -103,7 +123,7 @@ header {
     position: relative;
     @extend .nav-link;
     a {
-        font-family: Wavy;
+        font-family: Lato;
         font-size: 22px;
     }
     nav {
@@ -116,14 +136,14 @@ header {
             float: left;
             list-style-type: none;
             &:nth-child(1) {
-                left: 160px;
+                left: 140px;
                 top: 270px;
             }
             &:nth-child(2) {
-                left: 444px;
+                left: 425px;
             }
             &:nth-child(3) {
-                right: 160px;
+                right: 155px;
                 top: 270px;
             }
         }
