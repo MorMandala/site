@@ -2,6 +2,7 @@
 layout: page
 title: Gallery
 ---
+<div class="mosaicflow">
 {% for post in site.categories.gallery %}
     <div class="gallery_item">
         <a class="gallery_image" rel="main" href="#{{ post.title }}"><img src="{{ post.image_url }}"></a>
@@ -12,6 +13,7 @@ title: Gallery
         </div></div>
     </div>
 {% endfor %}
+</div>
 
 <script>
     $(document).ready( function() {
