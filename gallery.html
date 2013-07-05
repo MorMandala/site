@@ -4,7 +4,12 @@ title: Gallery
 ---
 {% for post in site.categories.gallery %}
     <div class="gallery_item">
-        <a class="gallery_image" rel="main" href="{{ post.image_url }}"><img src="{{ post.image_url }}"></a>
+        <a class="gallery_image" rel="main" href="#{{ post.title }}"><img src="{{ post.image_url }}"></a>
+        <div style="display:none"><div id="{{ post.title }}">
+            <h3>{{ post.image_title }}</h3>
+            <p>{{ post.content }}</p>
+            <img src="{{ post.image_url }}">
+        </div></div>
     </div>
 {% endfor %}
 
