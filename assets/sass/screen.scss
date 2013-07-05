@@ -1,0 +1,202 @@
+@import 'bourbon/bourbon'; 
+.nav-link {
+    a {
+        -webkit-transition-property: color;
+        -webkit-transition-duration: 0.3s;
+        background-color: none;
+        text-transform: uppercase;
+        letter-spacing: .2em;
+        color: black;
+    }
+    a:hover {
+        -webkit-transition-property: color;
+        -webkit-transition-duration: 0.3s;
+        color: lighten(rgb(27,94,61), 30%);
+    }
+}
+
+$Purp: #540EAD;
+$PurpDark: #340570;
+$PurpLight: rgb(132,67,214);
+$TealLight: rgb(67,214,143);
+$darkGrey: #0A0A0A;
+
+$verafont: vera-sans, serif;
+$latofont: lato, serif;
+
+// @font-face {
+//     font-family: Wavy;
+//     src: url(../fonts/AndBasR.ttf);
+// }
+// 
+// @font-face {
+//     font-family: Olde;
+//     src: url(../fonts/SOVERG__.ttf);
+// }
+// @font-face {
+//     font-family: Bon;
+//     src: url(../fonts/BonvenoCF-Light.otf);
+// }
+// @font-face {
+//     font-family: Ghandi;
+//     src: url(../fonts/GandhiSans-Italic.otf);
+// }
+// @font-face {
+//     font-family: Varela;
+//     src: url(../fonts/VarelaRound-Regular.otf);
+// }
+@font-face {
+    font-family: Lato;
+    src: url(../fonts/Lato-Lig.ttf);
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(243,243,243);
+    // background: url('http://i.imgur.com/nk3N43y.png') center center;
+    background: url('/assets/img/mo-pattern.png') center center;
+}
+a {
+    text-decoration: none;
+    color: $TealLight;
+}
+p {
+    font-size: 14px;
+}
+* {
+    font-family: $latofont;
+    color: $darkGrey;
+}
+.container {
+    width: 960px;
+    margin: 0 auto;
+    // background: rgba(255,255,255,.9);
+}
+#page {
+    padding: 20px;
+}
+header {
+    height: 100px;
+    position: relative;
+    h1, nav {
+        display: inline-block;
+    }
+    img {
+        position: absolute;
+        width: 250px;
+        z-index: 10;
+    }
+    nav {
+        display: block;
+        position: absolute;
+        top: 35px;
+        width: 100%;
+        border-bottom: 1px solid $TealLight;
+        ul {
+            padding: 0;
+            margin: 0;
+            li {
+                display: inline-block;
+                list-style-type: none;
+                padding-left: 30px;
+                float: right;
+                @extend .nav-link;
+            }
+        }
+        .gradient {
+            @include linear-gradient(top, rgba($TealLight,0.8), rgba($PurpLight,0) 50%);
+            margin: 0 auto;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left:0;
+            height:300px;
+            z-index: -1;
+        }
+    }
+}
+// splash page
+.splash-nav {
+    height: 20px;
+    position: relative;
+    @extend .nav-link;
+    a {
+        font-family: Lato;
+        font-size: 22px;
+    }
+    nav {
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            position: absolute;
+            float: left;
+            list-style-type: none;
+            &:nth-child(1) {
+                left: 140px;
+                top: 270px;
+            }
+            &:nth-child(2) {
+                left: 425px;
+            }
+            &:nth-child(3) {
+                right: 155px;
+                top: 270px;
+            }
+        }
+    }
+}
+.banner {
+    img:first-child {
+        position: absolute;
+    }
+    img:nth-child(2) {
+        margin-top: 95px;
+    }
+}
+#gallery {
+    li {
+        display: inline;
+        list-style-type: none;
+        margin: 5px;
+    }
+}
+.gallery_item {
+    width: 33.33%;
+    display: inline-block;
+    margin-right: -4px;
+    padding: 5px;
+    box-sizing: border-box;
+    img {
+        width: 100%;
+    }
+}
+.inner {
+    img {
+        float: left;
+        margin-right: 10px;
+    }
+}
+.img-wrapper {
+    text-align: center;
+    &.sig {
+        padding: 10px 0;
+    }
+    &.art { 
+        margin-top: 40px;
+        margin-left: 10px;
+        img {
+            height: 450px;
+        }
+    }
+    .circle {
+        height: 450px;
+        width: 450px;
+        margin: 0 auto;
+        border-radius: 225px;
+        @include box-shadow(0 0 20px -1px rgba(0, 116, 110, 0.65));
+    }
+}

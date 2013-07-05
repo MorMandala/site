@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="/assets/stylesheets/screen.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/components/fancybox/source/jquery.fancybox.css" rel="stylesheet" type="text/css" media="all">
+    <script src="/components/jquery/jquery.min.js"></script>
+    <script src="/components/fancybox/source/jquery.fancybox.pack.js"></script>
+    <script src="http://use.edgefonts.net/lato.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="img-wrapper sig">
+    <a href="/">
+    <img src="assets/img/mandalaSig1.png">
+</a>
+ 
+</div>
+<div class="splash-nav">
+    <nav>
+    <ul>
+        <li>
+            <a id="events" href='/events'>Events</a>
+        </li>
+        <li>
+            <a href='/gallery.html'>Gallery</a>
+        </li>
+        <li>
+            <a href='http://fineartamerica.com/profiles/morgan-manley.html'>Shop</a>
+        </li>
+    </ul>
+</nav>
+
+</div>
+<div class="img-wrapper art">
+    <div class="circle">
+        <img src="http://i.imgur.com/8b6ohoa.png">
+    </div>
+</div>
+
+
+    </div>
+    <script>
+        $( function() {
+            $('#events').click( function(e) {
+                e.preventDefault();
+                window.alert("Events Coming Soon");
+            });
+        });
+    </script>
+</body>
+</html>
